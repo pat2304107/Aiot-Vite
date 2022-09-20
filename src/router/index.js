@@ -4,7 +4,7 @@ import mainPage from '/src/components/mainPage.vue';
 let history = createWebHistory();
 let routes = [
   {
-    path: '/',
+    path: '/Aiot-Vite/',
     name: 'mainpage',
     component: mainPage,
   },
