@@ -4,10 +4,7 @@
       <div class="row h-100">
         <div class="col-9 h-100 row pt-4 text-white overflow-auto">
           <div class="col-xl-4 col-md-6 col-12" v-for="item in info.court">
-            <img
-              class="img-fluid courtImg pb-4"
-              :src="`/src/assets/court${item}.png`"
-            />
+            <img class="img-fluid courtImg pb-4" :src="courtImg[item]" />
             <!-- <img class="img-fluid courtImg pb-4" src="../assets/court0.png" /> -->
             <!-- <div>{{ getImgUrl(item) }}</div> -->
           </div>
@@ -52,11 +49,17 @@
 </style>
 
 <script>
+import court0 from '../assets/court0.png';
+import court1 from '../assets/court1.png';
+import court2 from '../assets/court2.png';
+import court3 from '../assets/court3.png';
+import court4 from '../assets/court4.png';
 import axios from 'axios';
 
 export default {
   data: function () {
     return {
+      courtImg: [court0, court1, court2, court3, court4],
       info: [],
       temperature: '',
       humidity: '',
